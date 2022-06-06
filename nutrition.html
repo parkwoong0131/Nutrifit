@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nutrition</title>
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <!--=============== HEADER & Bottom Navigation Bar ===============-->
+    <header class="header" id="header">
+        <div class="top__bar">
+            <i class="iconify" data-icon="ci:search" data-width="24"></i>
+            <a href="#" class="nav__logo">NutriFit</a>
+            <i class="iconify" data-icon="fluent:navigation-16-filled" data-width="24"></i>
+        </div>
+        <nav class="nav container">
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    
+                    <!------ 홈 ------>
+                    <li class="nav__item">
+                        <a href="./index.html" class="nav__link">
+                            <i class="iconify nav__icon" data-icon="ant-design:home-outlined" data-width="24"
+                                data-flip="horizontal"></i>
+                            <span class="nav__name">홈</span>
+                        </a>
+                    </li>
+
+                    <!------ 식단 ------>
+                    <li class="nav__item">
+                        <a href="./recipe.html" class="nav__link">
+                            <i class="iconify nav__icon" data-icon="material-symbols:list-alt-outline" data-width="24" data-flip="horizontal"></i>
+                            <span class="nav__name">식단</span>
+                        </a>
+                    </li>
+
+                    <!------ 영양 ------>
+                    <li class="nav__item">
+                        <a href="./nutrition.html" class="nav__link active-link">
+                            <i class="iconify nav__icon" data-icon="fluent:pill-16-filled" data-width="24" data-flip="horizontal"></i>
+                            <span class="nav__name">영양</span>
+                        </a>
+                    </li>
+
+                    <!------ 운동 ------>
+                    <li class="nav__item">
+                        <a href="./fitness.html" class="nav__link">
+                            <span class="iconify" data-icon="healthicons:exercise-running-outline" data-width="24" data-flip="horizontal"></span>                           
+                            <span class="nav__name">운동</span>
+                        </a>
+                    </li>
+
+                    <!------ 프로필 ------>
+                    <li class="nav__item">
+                        <a href="./profile.html" class="nav__link">
+                            <i class="iconify nav__icon" data-icon="bi:person" data-width="24"></i>
+                            <span class="nav__name">프로필</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- <img src="assets/img/perfil.png" alt="" class="nav__img"> -->
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ===================== 주간섭취일 ====================== -->
+        <section class="container">
+            <h3 class="section_title">
+                <span class="iconify icon" data-icon="bx:calendar"></span>
+                주간섭취일
+            </h3>
+
+            <div class="weekIntake_container flex component">
+                <div class="weekIntake active">
+                    <!-- <span class="iconify weekIntake" data-icon="akar-icons:circle-check-fill"></span> -->
+                    <input type="checkbox">
+                    <div>월</div>
+                </div>
+
+                <div class="weekIntake active1">
+                    <!-- <span class="iconify weekIntake" data-icon="akar-icons:circle-check-fill"></span> -->
+                    <input type="checkbox">
+                    <div>화</div>
+                </div>
+
+                <div class="weekIntake active">
+                    <!-- <span class="iconify weekIntake" data-icon="akar-icons:circle-check-fill"></span> -->
+                    <input type="checkbox">
+                    <div>수</div>
+                </div>
+
+                <div class="weekIntake active">
+                    <!-- <span class="iconify weekIntake" data-icon="akar-icons:circle-check-fill"></span> -->
+                    <input type="checkbox">
+                    <div>목</div>
+                </div>
+
+                <div class="weekIntake active">
+                    <!-- <span class="iconify weekIntake" data-icon="akar-icons:circle-check-fill"></span> -->
+                    <input type="checkbox">
+                    <div>금</div>
+                </div>
+
+                <div class="weekIntake active">
+                    <!-- <span class="iconify weekIntake" data-icon="akar-icons:circle-check-fill"></span> -->
+                    <input type="checkbox">
+                    <div>토</div>
+                </div>
+                
+                <div class="weekIntake active">
+                    <!-- <span class="iconify weekIntake" data-icon="akar-icons:circle-check-fill"></span> -->
+                    <input type="checkbox">
+                    <div>일</div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ===================== 섭취 중인 영양제 ==================== -->
+        <section class="container">
+            <h3 class="section_title">
+                <span class="iconify icon" data-icon="lucide:alarm-clock"></span>
+                섭취 중인 영양제
+            </h3>
+       
+             <div class="nutrition_container">
+                 <div class="nutrition">
+                    <span class="iconify icon" data-icon="charm:sun"></span>
+                    아침식사
+                    <a href="nutrition_morning"><span class="iconify space3" data-icon="fa-solid:plus"></span></a>
+
+                    <div class ="nutrition_bottom">
+                        <span>
+                            <span class="nutritionTime">00:00</span> <span class="nutritionName">name</span>
+                        </span>
+                        <!-- <span class="iconify space" data-icon="akar-icons:circle-check-fill"></span> -->
+                        <input class="space" type="checkbox">
+
+                    </div>
+                 </div>
+                
+                 <div class="nutrition">
+                    <span class="iconify icon" data-icon="ph:sun-horizon-bold"></span>
+                    점심식사
+                    <a href="nutrition_lunch"><span class="iconify space3" data-icon="fa-solid:plus"></span></a>                    <div class ="nutrition_bottom">
+                        <span>
+                            <span class="nutritionTime">00:00</span> <span class="nutritionName">name</span>
+                        </span>
+                        <!-- <span class="iconify space" data-icon="akar-icons:circle-check-fill"></span> -->
+                        <input class="space" type="checkbox">
+                    </div>
+                </div>
+                
+                <div class="nutrition">
+                    <span class="iconify icon" data-icon="iconoir:half-moon"></span>
+                    저녁식사
+                    <a href="nutrition_dinner"><span class="iconify space3" data-icon="fa-solid:plus"></span></a>                    <div class ="nutrition_bottom">
+                        <span>
+                            <span class="nutritionTime">00:00</span> <span class="nutritionName">name</span>
+                        </span>
+                        <!-- <span class="iconify space" data-icon="akar-icons:circle-check-fill"></span> -->
+                        <input class="space" type="checkbox">
+                    </div>
+                </div>
+             </div>
+        </section>     
+
+
+        <!-- ===================== 건강설문조사 ====================== -->
+    
+        <section class="container">
+            <h3 class="section_title">
+                <span class="iconify icon" data-icon="bi:clipboard2-check-fill"></span>
+                건강 설문조사
+            </h3>
+
+            <div class="survey section">
+                <div class="mini_text"><span class="iconify" data-icon="ps:check-box"></span>
+                    설문 조사를 통해 본인에게 맞는 영양제를 알아보세요.    
+                </div>
+                <button>설문조사 시작</button>
+                <div class="mini_text">마지막 설문조사일:`####.##.##`</div>
+            </div>
+        </section>
+
+
+        <!-- ===================== 영양제 추천 ====================== -->
+    
+        <section class=" container">
+            <h3 class="section_title">
+                <span class="iconify icon" data-icon="fluent:pill-16-filled" data-width="24" data-flip="horizontal"></span>
+                양영제 추천 
+            </h3>
+
+            <div class="recommand_container component">
+                <div class="recommand mini_text flex">
+                    <div class="recommand_vitamin bold_text">Mg</div>
+                    <span class="recommand_text">  평소에 '마그네슘' 섭취가 부족해요.</span>
+                </div>
+                <div class="recommand mini_text flex">
+                    <div class="recommand_vitamin bold_text">VitD</div>
+                    <span class="recommand_text">  '비타민 D'를 더 섭취하면 더 건강할 수 있어요.</span>
+                </div>
+                <div class="recommand mini_text flex">
+                    <div class="recommand_vitamin bold_text">VitC</div>
+                    <span class="recommand_text">  '피로회복'을 위해서 '비타민C'를 섭취하면 좋아요.</span>
+                </div>
+            </div>
+           
+        
+        </section>
+        <div class="block">
+    </main>
+
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

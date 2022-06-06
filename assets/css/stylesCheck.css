@@ -1,0 +1,749 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3rem;
+
+  /*========== Colors ==========*/
+  --hue: 174;
+  --sat: 63%;
+  --first-color: hsl(var(--hue), var(--sat), 40%);
+  --first-color-alt: hsl(var(--hue), var(--sat), 36%);
+  --title-color: hsl(var(--hue), 12%, 15%);
+  --text-color: hsl(var(--hue), 8%, 35%);
+  --body-color: hsl(var(--hue), 100%, 99%);
+  --container-color: #FFF;
+
+  /*========== Font and typography ==========*/
+  --body-font: 'Open Sans', sans-serif;
+  --h1-font-size: 1.5rem;
+  --normal-font-size: .938rem;
+  --tiny-font-size: .625rem;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+@media screen and (min-width: 968px) {
+  :root {
+    --h1-font-size: 2.25rem;
+    --normal-font-size: 1rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: var(--header-height) 0 0 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* ================= color ================= */
+.icon {
+    color :#2CA699;
+}
+
+/*=============== LAYOUT ===============*/
+.container {
+  max-width: 968px; 
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+.center { 
+    display:flex;
+    justify-content: center;
+}
+/* ================= TOP__BAR ============== */
+.top__bar{
+    height: var(--header-height);
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: #FFF;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-shadow: 0 -1px 12px hsla(var(--hue), var(--sat), 15%, 0.15);
+    border-radius: 0 0 1rem 1rem;
+
+}
+
+/*=============== HEADER ===============*/
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--container-color);
+  z-index: var(--z-fixed);
+  transition: .4s;
+}
+
+/*=============== NAV ===============*/
+.nav {
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__img {
+  width: 32px;
+  border-radius: 50%;
+}
+
+.nav__logo {
+  color: var(--title-color);
+  font-weight: 900;
+  color: #2CA699
+
+
+}
+
+@media screen and (max-width: 767px) {
+  .nav__menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: var(--container-color);
+    box-shadow: 0 -1px 12px hsla(var(--hue), var(--sat), 15%, 0.15);
+    width: 100%;
+    height: 3.5rem;
+    padding: 0 1rem;
+    display: grid;
+    align-content: center;
+    border-radius: 1rem 1rem 0 0;
+    transition: .4s;
+  }
+}
+
+.nav__list, 
+.nav__link {
+  display: flex;
+}
+
+.nav__link {
+  flex-direction: column;
+  align-items: center;
+  row-gap: 4px;
+  color: var(--title-color);
+  font-weight: 600;
+}
+
+.nav__list {
+  justify-content: space-around;
+}
+
+.nav__name {
+  font-size: var(--tiny-font-size);
+  /* display: none;*/ /* Minimalist design, hidden labels */
+}
+
+.nav__icon {
+  font-size: 1rem;
+}
+
+/*Active link*/
+.active-link {
+  position: relative;
+  color: var(--first-color);
+  transition: .3s;
+}
+
+/* Minimalist design, active link */
+/* .active-link::before{
+  content: '';
+  position: absolute;
+  bottom: -.5rem;
+  width: 4px;
+  height: 4px;
+  background-color: var(--first-color);
+  border-radius: 50%;
+} */
+
+/* Change background header */
+.scroll-header {
+  box-shadow: 0 1px 12px hsla(var(--hue), var(--sat), 15%, 0.15);
+}
+
+/* ==================== Section ================== */
+.section_title {
+    font-size: var(--h4-font-size);
+    color: var(--title-color);
+    text-align: left;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.section { 
+    background-color: rgb(244, 244, 244);
+    height: 100px;
+    /* margin-bottom: 15px; */
+    
+}
+
+.component {
+    background-color: rgb(237, 237, 237);
+    margin-bottom: 15px
+
+
+}
+
+.clicked {
+    color: #2CA699;
+}
+
+/*=============== MEDIA QUERIES ===============*/
+/* For small devices */
+/* Remove if you choose, the minimalist design */
+@media screen and (max-width: 320px) {
+  .nav__name {
+    display: none;
+  }
+}
+
+/* For medium devices */
+@media screen and (min-width: 576px) {
+  .nav__list {
+    justify-content: center;
+    column-gap: 3rem;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  body {
+    margin: 0;
+  }
+  .nav {
+    height: calc(var(--header-height) + 1.5rem); /* 4.5rem */
+  }
+  .nav__img {
+    display: none;
+  }
+  .nav__icon {
+    display: none;
+  }
+  .nav__name {
+    font-size: var(--normal-font-size);
+    /* display: block; */ /* Minimalist design, visible labels */
+  }
+  .nav__link:hover {
+    color: var(--first-color);
+  }
+  .active-link {
+    display:none;
+  }
+  /* First design, remove if you choose the minimalist design */
+  /* .active-link::before {
+    content: '';
+    position: absolute;
+    bottom: -.75rem;
+    width: 4px;
+    height: 4px;
+    background-color: var(--first-color);
+    border-radius: 50%;
+  } */
+
+  /* Minimalist design */
+  /* .active-link::before{
+      bottom: -.75rem;
+  } */
+}
+
+/* For large devices */
+@media screen and (min-width: 1024px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* ---------------- main -------------------- */
+
+.flex {
+    display: flex;
+}
+
+.block { 
+    height: 84px;
+}
+
+main { 
+    width: 360px;
+    /* border: 1px red solid; */
+}
+
+
+/* ================== HOME ==================== */
+/* ------------------ 일간 칼로리 섭취 --------------- */
+
+.daily_kcal { 
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.daily_kcal_left {
+    color:#2CA699;
+}
+
+.daily_kcal_top {
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.daily_kcal_botton {
+}
+
+.kcal_text {
+    font-size: 12px;
+    font-weight: 700;
+    padding: 3px;
+}
+
+.daily_kcal_graph {
+    border: 1px blue solid;
+    width: 140px;
+    margin-left: 15px;
+}
+
+.kcal {
+    background-color: #FFF;
+    border-radius: 5px;
+    box-shadow: 1px 1px rgb(182, 182, 182);
+    text-align: center;
+    margin-right: 4px;
+
+}
+
+
+
+/* ------------------ 주요 영양성분 -------------------*/
+.primary_container { 
+    justify-content: space-between;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.primary {
+    border: soild 1px red;
+    text-align: center;
+}
+.carbohydrate_graph { 
+    border: 1px solid blue;
+    width: 70px;
+    height: 50px;
+}
+
+
+.protein_graph {
+    border: 1px solid blue;
+    width: 70px;
+    height: 50px;
+}
+
+.fat_graph { 
+    border: 1px solid blue;
+    width: 70px;
+    height: 50px;
+}
+
+
+
+
+/* ------------------ 부족한 영양성분 -----------------*/
+.vitamin_container {
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    border-radius: 5px;
+    padding-left:10px;
+    padding-right:10px;
+}
+
+
+.vitamin { 
+    background-color: #FFF;
+    height: 50px;
+    width: 60px;
+    border-radius: 5px;
+    color: #2CA699;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    box-shadow: 1px 1px rgb(182, 182, 182);
+
+}
+
+.vitamin_group {
+    text-align: center;
+}
+
+.vitamin_text { 
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    border-radius: 5px;
+    font-size: 9px;
+}
+/* ---------------- 오늘 계획된 운동 --------------*/
+.exercise_container{
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+/* ---------------- 커뮤니티 -------------- */
+.community_container {
+    justify-content: space-between;
+}
+
+.community {
+    width: 100px;
+}
+
+.exercise {
+    background-color: #FFF;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 1px 1px rgb(182, 182, 182);
+
+}
+
+
+/* ============================================ */
+
+.exercise_text {
+    font-size : 11px;
+    margin-top: 5px;
+}
+
+.exercise_icon {
+    display: block;
+    /* background-color: red; */
+    margin-left: 15px;
+    margin-bottom: 5px;
+   
+}
+
+
+/* ================== RECIPE =============== */
+
+/* ----------- FOOD DAIRY ------------ */
+
+.recipe_container {
+    justify-content: space-between;
+}
+
+.recipe {
+    width: 100px;
+}
+
+.diary_container {
+    background-color: rgb(237, 237, 237);
+    padding-top: 20px;
+    padding-bottom: 15px;
+    border-radius: 10px;
+}
+
+
+.diary { 
+    background-color: #FFF;
+    border-radius: 5px;
+    height : 80px;
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 15px;
+}
+
+
+.water_container { 
+    padding: 10px;
+}
+
+
+/* ----------------- WATER CONTAINER ------------------- */
+
+
+.water_container { 
+    justify-content: space-between;
+}
+
+.water_component { 
+    vertical-align: middle;
+    justify-content: center;
+}
+
+#result {
+    display:none;
+}
+
+/* =================================== */
+
+/* =================== TEXT ================ */
+.mini_text { 
+    font-size: 15px;   
+}
+
+.bold_text {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+
+
+/* ===================== NUTRITION ==================== */
+
+/* ------------- 주간섭취일 ------------- */
+
+.weekIntake_container {
+    justify-content: space-between;
+    padding: 10px;
+
+}
+
+/* ------------- 섭취 중인 영양제 --------------- */
+
+.nutrition_container {
+    background-color: rgb(246, 246, 246);
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+}
+.nutrition {
+    background-color: rgb(234, 234, 234);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+
+}
+
+.nutrition_bottom{
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 1px 1px rgb(182, 182, 182);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+
+}
+
+.space {
+   margin-left: 100px;
+}
+
+.space2 {
+    margin-left: 140px;
+}
+
+.space3 { 
+    margin-left: 120px;
+}
+.space4 {
+    margin-left: 40px;
+}
+.check {
+    color: rgb(204, 204, 204);
+}
+/* --------------- 건강 설문조사 ----------------- */
+.survey {
+    justify-content: center;
+}
+
+/* ----------------- 영양제 추천 ----------------- */
+
+.recommand_container {
+    border-radius: 5px;
+    padding-top:5px;
+    padding-bottom:5px;
+
+}
+
+.recommand { 
+    background-color: #FFF;    
+    align-items: center;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.recommand_vitamin { 
+    font-size: 5px;
+    color: #2CA699;
+    width: 30px;
+    height: 30px;
+    box-shadow: 1px 1px rgb(182, 182, 182);
+    margin-right: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 3px;
+    padding: 10px;
+}
+
+.recommand_text { 
+    font-size: 11px;
+
+}
+
+/* ================ FITNESS ================= */
+
+/* --------- 주간운동일 ----------*/
+.weekFitness_container {
+    justify-content: space-between;
+    padding: 10px;
+
+}
+
+/* ---------- 운동패키지 ---------- */
+
+.pakage_container {
+    justify-content: space-between;
+    
+}
+
+.pakage {
+    width: 100px;
+}
+/* ----------- 운동계획표 ----------- */
+
+.fitnessPlan_container {
+    background-color: rgb(237, 237, 237);
+    border-radius: 5px;
+    padding-top:5px;
+    padding-bottom:5px;
+}
+.fitnessPlan {
+    background-color: #FFF;    
+    align-items: center;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+}
+
+/* ------------ 맞춤추천운동 ------------ */
+
+
+/* ============ 프로필 ================= */
+/* ------------ 내 정보 ---------------- */
+
+
+
+/* ------------ 내 설정 ---------------- */
+
+.setting {
+    margin-bottom: 15px;
+    margin-left: 15px;
+}
+
+
+
+
+/* ------------ 고객지원 ---------------- */
+
+.info { 
+
+}
+
+/* input[type="checkbox"] {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid #999;
+    appearance: none;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  input[type="checkbox"]:checked {
+    background: #2CA699;
+    content: \2714";
+    border: none;
+  } */
+
+  input[type="checkbox"] {
+    -webkit-appearance: none;
+    position: relative;
+    width: 20px;
+    height: 19px;
+    cursor: pointer;
+    outline: none !important;
+    /* border: 1px solid #eeeeee; */
+    /* border-radius: 10%; */
+    background: url('../img/waterOff.svg')
+
+}
+
+input[type="checkbox"]::before {
+    content: "\2713";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    overflow: hidden;
+    transform: scale(0) translate(-50%, -50%);
+    line-height: 1;
+}
+
+input[type="checkbox"]:hover {
+    border-color: rgba(170, 170, 170, 0.5);
+}
+
+input[type="checkbox"]:checked {
+    background-color: #2CA699;
+    background: url('../img/waterOn.svg');
+    border-color: rgba(255, 255, 255, 0.3);
+    color: white;
+}
+
+input[type="checkbox"]:checked::before {
+    border-radius: 2px;
+    transform: scale(1) translate(-50%, -50%)
+}
+
+
+
+
+
+
+
+

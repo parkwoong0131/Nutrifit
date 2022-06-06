@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriFit</title>
+
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+    <style type="text/css">
+
+        /* // CSS의 position 속성을 이용하여 두개의 DIV 레이아웃을 겹친다. */
+    
+        .u.i-progressbar { position:relative; }
+        .progress-label {
+            position:absolute;
+            left:50%;
+            top:8px;
+            font-weight:bold;
+            margin-left:-40px;
+                }
+    </style>
+</head>
+
+<body>
+    <!--=============== HEADER & Bottom Navigation Bar ===============-->
+    <header class="header" id="header">
+        <div class="top__bar">
+            <i class="iconify icon" data-icon="ci:search" data-width="24"></i>
+            <a href="#" class="nav__logo">NutriFit</a>
+            <i class="iconify icon" data-icon="fluent:navigation-16-filled" data-width="24"></i>
+        </div>
+        <nav class="nav container">
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+
+                    <!------ 홈 ------>
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">
+                            <i class="iconify nav__icon" data-icon="ant-design:home-filled" data-width="24"
+                                data-flip="horizontal"></i>
+                            <span class="nav__name">홈</span>
+                        </a>
+                    </li>
+
+                    <!------ 식단 ------>
+                    <li class="nav__item">
+                        <a href="./recipe.html" class="nav__link">
+                            <i class="iconify nav__icon" data-icon="material-symbols:list-alt-outline" data-width="24"
+                                data-flip="horizontal"></i>
+                            <span class="nav__name">식단</span>
+                        </a>
+                    </li>
+
+                    <!------ 영양 ------>
+                    <li class="nav__item">
+                        <a href="./nutrition.html" class="nav__link">
+                            <i class="iconify nav__icon" data-icon="fluent:pill-16-regular" data-width="24"
+                                data-flip="horizontal"></i>
+                            <span class="nav__name">영양</span>
+                        </a>
+                    </li>
+
+                    <!------ 운동 ------>
+                    <li class="nav__item">
+                        <a href="./fitness.html" class="nav__link">
+                            <span class="iconify" data-icon="healthicons:exercise-running-outline" data-width="24"
+                                data-flip="horizontal"></span>
+                            <span class="nav__name">운동</span>
+                        </a>
+                    </li>
+
+                    <!------ 프로필 ------>
+                    <li class="nav__item">
+                        <a href="./profile.html" class="nav__link">
+                            <i class="iconify nav__icon" data-icon="bi:person" data-width="24"></i>
+                            <span class="nav__name">프로필</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- <img src="assets/img/perfil.png" alt="" class="nav__img"> -->
+        </nav>
+    </header>
+
+    <main>
+        <!-- =================== 인사말 & 프로필 ================= -->
+        <section class="container hello">
+            <br>
+            <div class="section">
+                <h3>박웅님<br>안녕하세요</h3>
+                <i></i>
+            </div>
+        </section>
+
+        <!--=============== 일간 칼로리 섭취 ===============-->
+        <section class="container " id="home">
+            <h3 class="section_title">
+                <span class="iconify icon" data-icon="mdi:silverware-fork-knife" data-width="20"></span>
+                일간 칼로리 섭취
+            </h3>
+            <div class="daily_kcal section ">
+                <div class="daily_kcal_top flex">
+                    <div class="daily_kcal_left">칼로리 Kcal</div>
+
+                    <div class="daily_kcal_right flex">
+                        <div class="kcal" style="height: 37px; font-size: 5px;">
+                            <div class="must_kcal kcal_text" style="font-size: 5px;">권장칼로리</div>
+                            <div class="must_kcal kcal_text" style="font-size: 5px;">2400</div>
+                        </div>
+                        <div class="kcal" style="height: 37px; font-size: 5px;">
+                            <div class="eat_kcal kcal_text" style="font-size: 5px;">섭취칼로리</div>
+                            <div class="eat_kcal kcal_text" style="font-size: 5px;">1600</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="daily_kcal_bottom">
+                    <div>
+                        <!-- <div class="progressbar"><div class="progress-label">25%</div></div> -->
+                        <br>
+                        <div class="box">
+                            <div class="skill php">60%</div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+            
+        </section>
+
+        <!--=============== 주요 영양성분 ===============-->
+        <section class="container" id="recipe">
+            <h3 class="section_title">
+                <span class="iconify icon" data-icon="majesticons:list-box" data-width="20"></span>
+                주요 영양성분
+            </h3>
+
+            <div class="primary_container section">
+                    <p class="minimini_text">탄수화물</p>
+                    <div class="box">
+                        <div class="skill html">80%</div>
+                    </div>
+                  
+                    <p class="minimini_text">단백질</p>
+                    <div class="box">
+                        <div class="skill php">60%</div>
+                    </div>
+                    
+                    <p class="minimini_text">지방</p>
+                    <div class="box">
+                        <div class="skill html">80%</div>
+                    </div>
+                </div>
+        </section>
+
+        <!--=============== 부족한 영양성분 ===============-->
+        <section class="container " id="nutrition">
+            <h3 class="section_title">
+                <span class="iconify icon" data-icon="fluent:pill-16-filled" data-width="20"></span>
+                부족한 영양성분
+            </h3>
+            <div class="vitamin_container section">
+                <div class="vitamin_group">
+                    <div class="vitamin bold_text">VitC</div>
+                    <div class="vitamin_text">비타민C</div>
+                </div>
+                <div class="vitamin_group">
+                    <div class="vitamin bold_text">VitB</div>
+                    <div class="vitamin_text">비타민B</div>
+                </div>
+                <div class="vitamin_group">
+                    <div class="vitamin bold_text">VitD</div>
+                    <div class="vitamin_text">비타민D</div>
+                </div>
+                <div class="vitamin_group">
+                    <div class="vitamin bold_text">Mg</div>
+                    <div class="vitamin_text">마그네슘</div>
+                </div>
+            </div>
+        </section>
+
+        <!--=============== 오늘 계획된 운동 ===============-->
+        <section class="container " id="fitness">
+            <h3 class="section_title">
+                <span class="iconify icon" data-icon="healthicons:exercise-running" data-width="24"
+                    data-flip="horizontal"></span>
+                오늘 계획된 운동
+            </h3>
+
+            <div class="exercise_container section flex ">
+                <div class="exercise">
+                    <span class="iconify icon exercise_icon" data-icon="ic:twotone-fitness-center"
+                        data-width="32"></span>
+                    <div class="bold_text">숄더프레스</div>
+                    <div class="exercise_text">15kg 12회 5set</div>
+                </div>
+
+                <div class="exercise">
+                    <span class="iconify icon exercise_icon" data-icon="ic:twotone-fitness-center"
+                        data-width="32"></span>
+                    <div class="bold_text">데드리프트</div>
+                    <div class="exercise_text">15kg 12회 5set</div>
+                </div>
+
+                <div class="exercise">
+                    <span class="iconify icon exercise_icon" data-icon="healthicons:exercise-running" data-width="32"
+                        data-flip="horizontal"></span>
+                    <div class="bold_text">밴치프레스</div>
+                    <div class="exercise_text">15kg 12회 5set</div>
+                </div>
+            </div>
+        </section>
+
+        <!--=============== 커뮤니티 ===============-->
+        <section class="container " id="profile">
+            <h3 class="section_title">
+                <span class="iconify icon" data-icon="bi:people-fill" data-width="20"></span>
+                커뮤니티
+            </h3>
+
+            <div class="community_container section flex">
+                <img src="assets/img/community-1.png" class="community" alt="오늘의 식단">
+                <img src="assets/img/community-2.png" class="community" alt="오늘 운동완료">
+                <img src="assets/img/community-3.png" class="community" alt="식단 정보 공유">
+            </div>
+        </section>
+
+        <div class="block">
+
+        </div>
+    </main>
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/graph.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script type="text/JavaScript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script type="text/JavaScript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+
+ 
+</body>
+
+</html>

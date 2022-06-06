@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fitness</title>
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <!--=============== HEADER ===============-->
+    <header class="header" id="header">
+        <div class="top__bar">
+            <i class="iconify" data-icon="ci:search" data-width="24"></i>
+            <a href="#" class="nav__logo">NutriFit</a>
+            <i class="iconify" data-icon="fluent:navigation-16-filled" data-width="24"></i>
+        </div>
+
+        <nav class="nav container">
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+
+                    <!------ 홈 ------>
+                    <li class="nav__item">
+                        <a href="./index.html" class="nav__link">
+                            <i class="iconify nav__icon" data-icon="ant-design:home-outlined" data-width="24"
+                                data-flip="horizontal"></i>
+                            <span class="nav__name">홈</span>
+                        </a>
+                    </li>
+
+                    <!------ 식단 ------>
+                    <li class="nav__item">
+                        <a href="./recipe.html" class="nav__link">
+                            <i class="iconify nav__icon" data-icon="material-symbols:list-alt-outline" data-width="24"
+                                data-flip="horizontal"></i>
+                            <span class="nav__name">식단</span>
+                        </a>
+                    </li>
+                    <!------ 영양 ------>
+                    <li class="nav__item">
+                        <a href="./nutrition.html" class="nav__link">
+                            <i class="iconify nav__icon" data-icon="fluent:pill-16-regular" data-width="24"
+                                data-flip="horizontal"></i>
+                            <span class="nav__name">영양</span>
+                        </a>
+                    </li>
+
+                    <!------ 운동 ------>
+                    <li class="nav__item">
+                        <a href="./fitness.html" class="nav__link active-link">
+                        <span class="iconify" data-icon="healthicons:exercise-running" data-width="24" data-flip="horizontal"></span>                            
+                        <span class="nav__name">운동</span>
+                        </a>
+                    </li>
+
+                    <!------ 프로필 ------>
+                    <li class="nav__item">
+                        <a href="./profile.html" class="nav__link">
+                            <i class="iconify nav__icon" data-icon="bi:person" data-width="24"></i>
+                            <span class="nav__name">프로필</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- <img src="assets/img/perfil.png" alt="" class="nav__img"> -->
+        </nav>
+    </header>
+
+    <main>
+         <!-- ===================== 주간운동일 ====================== -->
+         <section class="container">
+            <h3 class="section_title">
+                <i class="iconify icon" data-icon="healthicons:exercise" data-width="24"></i>
+                주간운동일
+            </h3>
+
+            <div class="weekFitness_container flex component">
+                <div class="weekfitness active">
+                    <!-- <span class="iconify" data-icon="akar-icons:circle-check-fill"></span> -->
+                    <input type="checkbox">
+                    <div>월</div>
+                </div>
+
+                <div class="weekFitness active2">
+                    <!-- <span class="iconify" data-icon="akar-icons:circle-check-fill"></span> -->
+                    <input type="checkbox">
+                    <div>화</div>
+                </div>
+
+                <div class="weekFitness active">
+                    <!-- <span class="iconify" data-icon="akar-icons:circle-check-fill"></span> -->
+                    <input type="checkbox">
+                    <div>수</div>
+                </div>
+
+                <div class="weekFitness active">
+                    <!-- <span class="iconify" data-icon="akar-icons:circle-check-fill"></span> -->
+                    <input type="checkbox">
+                    <div>목</div>
+                </div>
+
+                <div class="weekFitness active">
+                    <!-- <span class="iconify" data-icon="akar-icons:circle-check-fill"></span> -->
+                    <input type="checkbox">
+                    <div>금</div>
+                </div>
+
+                <div class="weekFitness active">
+                    <!-- <span class="iconify" data-icon="akar-icons:circle-check-fill"></span> -->
+                    <input type="checkbox">
+                    <div>토</div>
+                </div>
+
+                <div class="weekFitness active">
+                    <!-- <span class="iconify" data-icon="akar-icons:circle-check-fill"></span> -->
+                    <input type="checkbox">
+                    <div>일</div>
+                </div>
+            </div>
+        </section>
+
+         <!-- ===================== 운동패키지 ====================== -->
+         <section class="container">
+            <h3 class="section_title">
+                <span class="iconify icon" data-icon="healthicons:exercise-running" data-width="24" data-flip="horizontal"></span>
+                운동 패키지
+            </h3>
+
+            <div class="pakage_container flex">
+                <img src="assets/img/fitness-1.png" alt="상체강화set" class="pakage">
+                <img src="assets/img/fitness-2.png" alt="하체강화set" class="pakage">
+                <img src="assets/img/fitness-3.png" alt="지방감소set" class="pakage">
+
+            </div>
+            <div class="weekFitness_container flex">
+                
+            </div>
+        </section>
+
+           <!-- ===================== 운동계획표 ====================== -->
+           <section class="container">
+            <h3 class="section_title">
+                <i class="iconify icon" data-icon="material-symbols:list-alt" data-width="24" data-flip="horizontal"></i>                
+                운동 계획표
+                <span class="iconify space3" data-icon="fa-solid:plus"></span>
+            </h3>
+
+            <div class="fitnessPlan_container component">
+                <div class="fitnessPlan flex">
+                    <div class="fitnessPlan_left">
+                        <span class="iconify icon" data-icon="ic:twotone-fitness-center" data-width="32"></span>
+                        숄더프레스
+                        <div>
+                            <span class="mini_text">15kg</span>
+                            <span class="mini_text">12회</span>
+                            <span class="mini_text">5set</span>
+                        </div>
+                    </div>
+
+                    <div class="fitnessPlan_right">
+                        <!-- <span class="iconify space" data-icon="akar-icons:circle-check-fill"></span> -->
+                        <input class="space" type="checkbox">
+                    
+                    </div>
+                </div>
+
+                <div class="fitnessPlan flex">
+                    <div class="fitnessPlan_left">
+                        <span class="iconify icon" data-icon="ic:twotone-fitness-center" data-width="32"></span>
+                        데드리프트
+                        <div>
+                            <span class="mini_text">15kg</span>
+                            <span class="mini_text">12회</span>
+                            <span class="mini_text">5set</span>
+                        </div>
+                    </div>
+
+                    <div class="fitnessPlan_right">
+                        <!-- <span class="iconify space" data-icon="akar-icons:circle-check-fill"></span> -->
+                        <input class="space" type="checkbox">
+
+                    </div>
+                </div>
+
+                <div class="fitnessPlan flex">
+                    <div class="fitnessPlan_left">
+                        <span class="iconify icon" data-icon="healthicons:exercise-running" data-width="32" data-flip="horizontal"></span>
+                        실내사이클
+                        <div>
+                            <span class="mini_text">15kg</span>
+                            <span class="mini_text">12회</span>
+                            <span class="mini_text">5set</span>
+                        </div>
+                    </div>
+
+                    <div class="fitnessPlan_right">
+                        <!-- <span class="iconify space" data-icon="akar-icons:circle-check-fill"></span> -->
+                          <input class="space" type="checkbox">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+           <!-- ===================== 맞춤 운동추천 ====================== -->
+           <section class="container">
+            <h3 class="section_title">
+                <span class="iconify icon" data-icon="bi:person-fill" data-width="32"></span>
+                맞춤추천운동
+            </h3>
+
+            <div class="customFitness component">
+                <i class="iconify" data-icon="material-symbols:list-alt-outline" data-width="24" data-flip="horizontal"></i>
+                <span class="mini_text">
+                    현재 속한 장소, 본인이 보유한 도구를 기반으로 원하는 부위의 운동을 추천합니다.
+                </span>    
+                <br>
+                <button class="customStart">맞춤운동 추천 시작</button>
+            </div>
+        </section>
+        <div class="block">
+    </main>
+
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
