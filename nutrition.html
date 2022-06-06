@@ -135,11 +135,11 @@
                  <div class="nutrition">
                     <span class="iconify icon" data-icon="charm:sun"></span>
                     아침식사
-                    <a href="nutrition_morning"><span class="iconify space3" data-icon="fa-solid:plus"></span></a>
+                    <a href="/nutrition/nutrition_morning.html"><span class="iconify space3" data-icon="fa-solid:plus"></span></a>
 
                     <div class ="nutrition_bottom">
                         <span>
-                            <span class="nutritionTime">00:00</span> <span class="nutritionName">name</span>
+                            <span class="nutritionTime"></span> <span id="nutritionMorning"></span>
                         </span>
                         <!-- <span class="iconify space" data-icon="akar-icons:circle-check-fill"></span> -->
                         <input class="space" type="checkbox">
@@ -150,9 +150,9 @@
                  <div class="nutrition">
                     <span class="iconify icon" data-icon="ph:sun-horizon-bold"></span>
                     점심식사
-                    <a href="nutrition_lunch"><span class="iconify space3" data-icon="fa-solid:plus"></span></a>                    <div class ="nutrition_bottom">
+                    <a href="/nutrition/nutrition_lunch.html"><span class="iconify space3" data-icon="fa-solid:plus"></span></a>                    <div class ="nutrition_bottom">
                         <span>
-                            <span class="nutritionTime">00:00</span> <span class="nutritionName">name</span>
+                            <span class="nutritionTime"></span> <span id="nutritionLunch""></span>
                         </span>
                         <!-- <span class="iconify space" data-icon="akar-icons:circle-check-fill"></span> -->
                         <input class="space" type="checkbox">
@@ -162,9 +162,10 @@
                 <div class="nutrition">
                     <span class="iconify icon" data-icon="iconoir:half-moon"></span>
                     저녁식사
-                    <a href="nutrition_dinner"><span class="iconify space3" data-icon="fa-solid:plus"></span></a>                    <div class ="nutrition_bottom">
+                    <a href="/nutrition/nutrition_dinner.html"><span class="iconify space3" data-icon="fa-solid:plus"></span></a>                   
+                     <div class ="nutrition_bottom">
                         <span>
-                            <span class="nutritionTime">00:00</span> <span class="nutritionName">name</span>
+                            <span class="nutritionTime"></span> <span id="nutritionDinner"></span>
                         </span>
                         <!-- <span class="iconify space" data-icon="akar-icons:circle-check-fill"></span> -->
                         <input class="space" type="checkbox">
@@ -222,6 +223,8 @@
 
     <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/nutritionStorage.js"></script>
+    <script src="assets/js/takeData.js"></script>
 
 </body>
 

@@ -10,17 +10,24 @@
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<style>
-
-
-</style>
 <body>
-    <section>
+    <!-- <section>
         <div class="section container"></div>
-        <input type="time">
-        <input value="확인"type="submit">
-    
-    </section>
+        <form class="inputForm" action=""></form> -->
+            <!-- <input class="inputTime" type="time"> -->
+            <!-- <input class="inputText" type="text">
+            <input class="submit" type="button" value="확인">
+        </form>    
+    </section> -->
+    <form id="todo-form">
+        <!-- <input type="time"> -->
+        <input type="text" placeholder="먹을 영양제를 입력해주세요." required />
+      </form>
+      <ul id="todo-list"></ul>
+      <a href="/nutrition.html"><button>확인</button></a>
+
+    <script src="assets/js/nutritionStorage.js"></script>
+    <script src="/assets/js/todo.js"></script>
 </body>
 
 </html>
