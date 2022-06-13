@@ -10,4 +10,3 @@ function paintData(newTodo) {
     const button = document.lunch.createElement("button");
     button.innerText = "💊";
   }
-
